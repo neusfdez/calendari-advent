@@ -449,7 +449,7 @@
     let d = 'M24 426'; for (let x = 24; x < 214; x += 12) d += 'q6 9 12 0'; stroke(g, d, CREAM, 2, { opacity: 0.7 });
     band(g, 24, 452, 190, 8, CREAM);
     // tienda
-    sign(g, 34, 466, 170, 30, null, 'Feliz Navidad', "'Dancing Script', cursive", CREAM, 25);
+    sign(g, 34, 466, 170, 30, null, 'Bon Nadal', "'Dancing Script', cursive", CREAM, 25);
     shopWindow(g, 38, 514, 86, 122, 'tree');
   }
 
@@ -464,7 +464,7 @@
     // cornisas entre pisos
     band(g, 214, 336, 182, 7, c.dark);
     band(g, 214, 428, 182, 6, CREAM);
-    sign(g, 228, 436, 154, 26, '#7c1c1a', 'JUGUETERÍA', "'Playfair Display', serif", '#f6d47b', 16);
+    sign(g, 228, 436, 154, 26, '#7c1c1a', 'CASA MARY', "'Playfair Display', serif", '#f6d47b', 16);
     awning(g, 222, 470, 80, 24, '#c9342d', CREAM);
     awning(g, 308, 470, 80, 24, '#c9342d', CREAM);
     shopWindow(g, 226, 504, 74, 132, 'toys');
@@ -494,7 +494,7 @@
     };
     flags(296, 400, 582); flags(392, 400, 582);
     band(g, 396, 446, 190, 8, CREAM);
-    sign(g, 408, 464, 166, 28, TEAL, 'DULCES & TURRONES', "'Playfair Display', serif", CREAM, 12);
+    sign(g, 408, 464, 166, 28, TEAL, 'SUNRISE CAFÉ', "'Playfair Display', serif", CREAM, 12);
     shopWindow(g, 410, 506, 80, 130, 'sweets');
     garland(g, 404, 578, 456, 5, 4);
   }
@@ -515,7 +515,7 @@
     band(g, 586, 452, 180, 8, CREAM);
     awning(g, 594, 470, 164, 26, '#f2a7b5', CREAM);
     shopWindow(g, 598, 508, 100, 128, 'cakes');
-    sign(g, 594, 404 + 14, 164, 26, null, 'Pastelería', "'Dancing Script', cursive", '#1f5d63', 24);
+    sign(g, 594, 404 + 14, 164, 26, null, 'CASA ERIC', "'Dancing Script', cursive", '#1f5d63', 24);
   }
 
   function drawCrimson(g) {
@@ -530,7 +530,7 @@
     // entramado
     stroke(g, 'M766 330H976M800 330V440M942 330V440M766 440H976', c.dark, 3, { opacity: 0.45 });
     band(g, 766, 446, 210, 8, CREAM);
-    sign(g, 776, 462, 190, 32, null, 'Brilla y sueña', "'Dancing Script', cursive", '#f6d47b', 25);
+    sign(g, 776, 462, 190, 32, null, 'OCINE', "'Dancing Script', cursive", '#f6d47b', 25);
     garland(g, 772, 970, 500, 6, 4);
     shopWindow(g, 782, 512, 96, 124, 'gifts');
   }
@@ -743,7 +743,7 @@
       const n = daysUntil(start);
       sub.textContent = n <= 1 ? '¡Mañana se abre la primera ventana!' : `Faltan ${n} días para la primera ventana`;
     } else if (today >= 1 && today <= 24) sub.textContent = `Hoy se abre la ventana ${today} ✨`;
-    else sub.textContent = '¡Feliz Navidad! 🎄';
+    else sub.textContent = '¡Bon Nadal! 🎄';
   }
 
   let toastTimer;
