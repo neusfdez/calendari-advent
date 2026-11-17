@@ -829,6 +829,8 @@
     $('#cardBody').innerHTML = data.html && data.html.trim()
       ? data.html
       : '<p class="empty"><span>🎁</span>Aquí habrá una sorpresa muy pronto…</p>';
+    if (window.initQuiz) window.initQuiz($('#cardBody'));
+    if (window.initBola) window.initBola($('#cardBody'));
   }
 
   /* =========================================================
