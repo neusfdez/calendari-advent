@@ -15,7 +15,7 @@ window.DAYS = [
   /*  1 */ { titulo: "", html: "" },
   /*  2 */ { titulo: "", html: "" },
   /*  3 */ { titulo: "", html: "" },
-  /*  4 */ { titulo: "", html: "" },
+  /*  4 */ { titulo: "Hola", html: '<img src="gat.jpg" alt="Foto"><p>El gatet et desitja un bon dia</p>' },
   /*  5 */ { titulo: "", html: "" },
   /*  6 */ { titulo: "", html: "" },
   /*  7 */ { titulo: "", html: "" },
