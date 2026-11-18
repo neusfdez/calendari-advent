@@ -96,7 +96,7 @@
       fig.appendChild(img);
       wrap.appendChild(fig);
 
-      wrap.appendChild(h('p', 'qz-q', '¿De qué película es?'));
+      wrap.appendChild(h('p', 'qz-q', 'De quina peli és?'));
 
       const opts = h('div', 'qz-opts');
       const fb = h('p', 'qz-fb');

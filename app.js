@@ -768,7 +768,7 @@
       g.classList.remove('shake'); void g.getBBox(); g.classList.add('shake');
       setTimeout(() => g.classList.remove('shake'), 520);
       const n = daysUntil(unlockDate(day));
-      toast(n <= 1 ? '🔒 Esta ventana se abre mañana' : `🔒 Se abre el ${day} de diciembre (faltan ${n} días)`);
+      toast(n <= 1 ? '🔒 Aquesta finestra s\'obra demà' : `🔒 Sé que estas impacient però s\'obra el ${day} de desembre (falten ${n} dies)`);
       return;
     }
     busy = true;
@@ -822,7 +822,7 @@
 
   function fillCard(day) {
     const data = (window.DAYS && window.DAYS[day - 1]) || {};
-    $('#cardDate').textContent = `${day} de diciembre`;
+    $('#cardDate').textContent = `${day} de desembre`;
     const title = $('#cardTitle');
     title.textContent = data.titulo || '';
     title.hidden = !data.titulo;

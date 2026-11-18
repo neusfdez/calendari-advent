@@ -24,7 +24,7 @@ window.DAYS = [
   /* 10 */ { titulo: "", html: "" },
   /* 11 */ { titulo: "", html: "" },
   /* 12 */ { titulo: "Endevina la peli", html: '<div data-quiz></div>' },
-  /* 13 */ { titulo: "", html: "" },
+  /* 13 */ { titulo: "Pure cinema", html: '<video src="video/samurai.mp4" controls playsinline preload="metadata" style="max-height:44svh"></video>' },
   /* 14 */ { titulo: "", html: "" },
   /* 15 */ { titulo: "", html: "" },
   /* 16 */ { titulo: "", html: "" },
