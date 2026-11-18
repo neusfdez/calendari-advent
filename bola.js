@@ -8,14 +8,14 @@
 */
 (function () {
   const AMBITOS = [
-    { n: "Amor",     e: ["😍", "💘", "🥰", "💌", "💍", "🔥", "🙈", "🫶"] },
-    { n: "Familia",  e: ["🏡", "🤗", "🥘", "🎂", "🐶", "🧸", "👨‍👩‍👧", "🎄"] },
-    { n: "Amigos",   e: ["🎉", "🍻", "🤝", "🥂", "🎤", "🏕️", "🍕", "🫂"] },
-    { n: "Dinero",   e: ["🤑", "💰", "💸", "📈", "🪙", "🏦", "💎", "🧾"] },
-    { n: "Trabajo",  e: ["🚀", "🏆", "💼", "☕", "😴", "🎯", "🧠", "💡"] },
-    { n: "Salud",    e: ["💪", "🏃‍♀️", "🧘‍♀️", "🥗", "😴", "☀️", "🍫", "🚴"] },
-    { n: "Viajes",   e: ["✈️", "🏖️", "🏔️", "🚂", "🌍", "🗺️", "🚗", "🛳️"] },
-    { n: "Suerte",   e: ["🍀", "🌟", "🎰", "🎁", "🌈", "🔮", "🐞", "🎲"] }
+    { n: "Amor",     e: ["😍", "💘", "​😈", "​🏳️‍🌈", "💍", "🔥", "​🚩", "🥀"] },
+    { n: "Familia",  e: ["🏡", "🤗", "​🚼", "🎂", "🐶", "🧸", "👨‍👩‍👧", "🎄"] },
+    { n: "Amics",   e: ["🎉", "🍻", "🤝", "​🪩", "🎤", "🏕️", "🍕", "🫂"] },
+    { n: "Money",   e: ["🤑", "​💀", "💸", "📈", "​🎁", "0️⃣", "💎", "🧾"] },
+    { n: "Treball",  e: ["🚀", "🏆", "​🫩", "​🤡", "😴", "🎯", "🧠", "💡"] },
+    { n: "Salut",    e: ["💪", "🏃‍♀️", "🧘‍♀️", "🥗", "😴", "☀️", "🍫", "🚴"] },
+    { n: "Viatges",   e: ["✈️", "🏖️", "🏔️", "🚂", "🌍", "🗺️", "🚗", "🛳️"] },
+    { n: "Sort",   e: ["🍀", "🌟", "🎰", "🎁", "🌈", "​🤡", "🐞", "🎲"] }
   ];
 
   const BALL = `
@@ -100,9 +100,9 @@
     const wrap = h('div', 'bc');
     const ball = h('button', 'bc-ball');
     ball.type = 'button';
-    ball.setAttribute('aria-label', 'Bola de cristal: toca para ver tu 2027');
+    ball.setAttribute('aria-label', 'Bola de cristal: toca per veure el teu 2027');
     ball.innerHTML = BALL;
-    const hint = h('p', 'bc-hint', 'Toca la bola para ver tu 2027');
+    const hint = h('p', 'bc-hint', 'Toca la bola per veure el teu 2027');
     const grid = h('div', 'bc-grid');
     grid.setAttribute('aria-live', 'polite');
     wrap.append(ball, hint, grid);
@@ -115,7 +115,7 @@
       if (ocupada) return;
       ocupada = true;
       ball.disabled = true;
-      hint.textContent = 'Mirando el futuro…';
+      hint.textContent = 'Llegint el futur…';
       grid.innerHTML = '';
       ball.classList.remove('small');
       ball.classList.add('shake');
@@ -135,7 +135,7 @@
         });
         setTimeout(() => {
           if (!hint.isConnected) return;
-          hint.textContent = 'Tu 2027 ✨ Toca la bola para volver a consultar';
+          hint.textContent = 'El teu 2027 ✨';
           ball.disabled = false;
           ocupada = false;
         }, 150 + AMBITOS.length * 220 + 200);
