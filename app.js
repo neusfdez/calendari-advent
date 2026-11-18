@@ -824,8 +824,8 @@
     const data = (window.DAYS && window.DAYS[day - 1]) || {};
     $('#cardDate').textContent = `${day} de diciembre`;
     const title = $('#cardTitle');
-    title.textContent = `Día ${day}`;
-    if (data.titulo) { const sm = document.createElement('small'); sm.textContent = data.titulo; title.appendChild(sm); }
+    title.textContent = data.titulo || '';
+    title.hidden = !data.titulo;
     $('#cardBody').innerHTML = data.html && data.html.trim()
       ? data.html
       : '<p class="empty"><span>🎁</span>Aquí habrá una sorpresa muy pronto…</p>';

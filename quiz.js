@@ -9,19 +9,19 @@
 */
 (function () {
   const PREGUNTAS = [
-    { img: "quiz/frame1.jpg", correcta: "Solo en casa",         falsas: ["Elf", "El Grinch", "Love Actually"] },
-    { img: "quiz/frame2.jpg", correcta: "El Grinch",            falsas: ["Polar Express", "Los Gremlins", "Qué bello es vivir"] },
-    { img: "quiz/frame3.jpg", correcta: "Elf",                  falsas: ["Solo en casa", "Qué bello es vivir", "Santa Claus"] },
-    { img: "quiz/frame4.jpg", correcta: "Love Actually",        falsas: ["Pesadilla antes de Navidad", "Elf", "El Grinch"] },
-    { img: "quiz/frame5.jpg", correcta: "Polar Express",        falsas: ["Solo en casa", "Los Fantasmas atacan al jefe", "Elf"] },
-    { img: "quiz/frame6.jpg", correcta: "Qué bello es vivir",   falsas: ["Milagro en la calle 34", "Love Actually", "Polar Express"] }
+    { img: "quiz/klaus.jpg", correcta: "Klaus",         falsas: ["Elf", "Pesadilla antes de Navidad", "Arthur Christmas"] },
+    { img: "quiz/grinch.jpg", correcta: "El Grinch",            falsas: ["Solo en casa", "Los Gremlins", "Elf"] },
+    { img: "quiz/cambio-princesa.jpg", correcta: "Cambio de princesa", falsas: ["Love Actually", "Calendario de Navidad", "El diario de Noel"] },
+    { img: "quiz/love-actually.jpg", correcta: "Love Actually",        falsas: ["Herencia Navideña", "El caballero de la Navidad", "The Holiday"] },
+    { img: "quiz/last-christmas.jpg", correcta: "Last Christmas",        falsas: ["Let it snow", "Meet me next Christmas", "Navidad inesperada"] },
+    { img: "quiz/the-holiday.jpg", correcta: "The Holiday",   falsas: ["Last Christmas", "Love Actually", "El diario de Bridget Jones"] }
   ];
 
   const MENSAJES = [
-    [1.0, "¡Perfecto! Eres una enciclopedia navideña 🎄"],
-    [0.6, "¡Muy bien! Se nota que has visto muchas pelis con manta y chocolate ☕"],
-    [0.3, "Nada mal… toca maratón de cine navideño 🍿"],
-    [0,   "Esta Navidad toca ponerse al día con las películas 🎁"]
+    [1.0, "Vaya crack 🎄"],
+    [0.6, "Prou bé però et falten pelis de Nadal..."],
+    [0.3, "Aquest nadal t'has de posar al dia... 🍿"],
+    [0,   "No som amics"]
   ];
 
   /* ---------- estilos (se inyectan solos, no hace falta tocar styles.css) ---------- */

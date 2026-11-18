@@ -23,7 +23,7 @@ window.DAYS = [
   /*  9 */ { titulo: "", html: "" },
   /* 10 */ { titulo: "", html: "" },
   /* 11 */ { titulo: "", html: "" },
-  /* 12 */ { titulo: "Adivina la peli", html: '<p>¿Reconoces la película por un solo fotograma?</p><div data-quiz></div>' },
+  /* 12 */ { titulo: "Adivina la peli", html: '<p>Reconeixes la peli?</p><div data-quiz></div>' },
   /* 13 */ { titulo: "", html: "" },
   /* 14 */ { titulo: "", html: "" },
   /* 15 */ { titulo: "", html: "" },
