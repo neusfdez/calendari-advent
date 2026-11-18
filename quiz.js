@@ -86,7 +86,7 @@
       host.innerHTML = '';
       const p = PREGUNTAS[i];
       const wrap = h('div', 'qz');
-      wrap.appendChild(h('p', 'qz-prog', `Fotograma ${i + 1} de ${total}`));
+      wrap.appendChild(h('p', 'qz-prog', `Peli ${i + 1} de ${total}`));
 
       const fig = h('div', 'qz-frame');
       const img = new Image();
@@ -100,7 +100,7 @@
 
       const opts = h('div', 'qz-opts');
       const fb = h('p', 'qz-fb');
-      const next = h('button', 'qz-btn', i === total - 1 ? 'Ver resultado' : 'Siguiente');
+      const next = h('button', 'qz-btn', i === total - 1 ? 'Veure resultat' : 'Següent');
       next.type = 'button';
       next.hidden = true;
       next.onclick = () => { i++; i < total ? pregunta() : final(); };
@@ -117,7 +117,7 @@
             else if (x === b) x.classList.add('ko');
             else x.classList.add('dim');
           });
-          fb.textContent = ok ? '¡Correcto! 🎄' : `Era «${p.correcta}»`;
+          fb.textContent = ok ? 'Correcte!! 🎄' : `Era «${p.correcta}»`;
           next.hidden = false;
           next.focus({ preventScroll: true });
         };
@@ -131,11 +131,11 @@
     function final() {
       host.innerHTML = '';
       const wrap = h('div', 'qz');
-      wrap.appendChild(h('p', 'qz-prog', 'Resultado'));
+      wrap.appendChild(h('p', 'qz-prog', 'Resultat'));
       wrap.appendChild(h('p', 'qz-score', `${aciertos} / ${total}`));
       const ratio = aciertos / total;
       wrap.appendChild(h('p', 'qz-q', MENSAJES.find(m => ratio >= m[0])[1]));
-      const again = h('button', 'qz-btn', 'Jugar otra vez');
+      const again = h('button', 'qz-btn', 'Tornar a jugar');
       again.type = 'button';
       again.onclick = () => { i = 0; aciertos = 0; pregunta(); };
       wrap.appendChild(again);
