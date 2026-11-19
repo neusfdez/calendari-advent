@@ -4,7 +4,7 @@
   Para cambiar el mensaje o la foto, edita solo las dos líneas de abajo.
 */
 (function () {
-  const MENSAJE = "Un bombón para otro bombón (us porto xocolatitos)";
+  const MENSAJE = "Un bombó per a un altre bombó (us porto xocolatines)";
   const FOTO = "contingut/bombon.jpg";   // sube tu foto a la carpeta rasca/ del repositorio
   const UMBRAL = 0.5;                // al rascar esta fracción se destapa todo
 

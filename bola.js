@@ -100,7 +100,7 @@
     const wrap = h('div', 'bc');
     const ball = h('button', 'bc-ball');
     ball.type = 'button';
-    ball.setAttribute('aria-label', 'Bola de cristal: toca per veure el teu 2027');
+    ball.setAttribute('aria-label', 'Bola de vidre: toca per veure el teu 2027');
     ball.innerHTML = BALL;
     const hint = h('p', 'bc-hint', 'Toca la bola per veure el teu 2027');
     const grid = h('div', 'bc-grid');

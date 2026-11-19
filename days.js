@@ -20,7 +20,7 @@ window.DAYS = [
   /*  6 */ { titulo: "Vesteix al ninot de neu", html: '<div data-muneco></div>' },
   /*  7 */ { titulo: "", html: "" },
   /*  8 */ { titulo: "Throwback to Zhangjiajie", html: '<iframe src="https://open.spotify.com/embed/track/76FZM38RC8XaAjJ77CVTNe?utm_source=generator&si=a5c3e66e751b4960" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>' },
-  /*  9 */ { titulo: "", html: "" },
+  /*  9 */ { titulo: "Galeta de la sort", html: '<div data-galeta></div>' },
   /* 10 */ { titulo: "", html: "" },
   /* 11 */ { titulo: "Repte del dia", html: "<p>Posa't mitjons de nadal o amb estampat guai</p><img src='contingut/mitjons.jpg' alt='Mitjons de Nadal'>" },
   /* 12 */ { titulo: "Endevina la peli", html: '<div data-quiz></div>' },

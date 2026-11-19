@@ -829,10 +829,7 @@
     $('#cardBody').innerHTML = data.html && data.html.trim()
       ? data.html
       : '<p class="empty"><span>🎁</span>Aquí hi haurà una sorpresa ben aviat…</p>';
-    if (window.initQuiz) window.initQuiz($('#cardBody'));
-    if (window.initBola) window.initBola($('#cardBody'));
-    if (window.initRasca) window.initRasca($('#cardBody'));
-    if (window.initMuneco) window.initMuneco($('#cardBody'));
+    ['initQuiz', 'initBola', 'initRasca', 'initMuneco', 'initGaleta'].forEach(f => window[f] && window[f]($('#cardBody')));
   }
 
   /* =========================================================
