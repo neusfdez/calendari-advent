@@ -768,7 +768,7 @@
       g.classList.remove('shake'); void g.getBBox(); g.classList.add('shake');
       setTimeout(() => g.classList.remove('shake'), 520);
       const n = daysUntil(unlockDate(day));
-      toast(n <= 1 ? '🔒 Aquesta finestra s\'obra demà' : `🔒 Sé que tens impaciència, però s\'obra el ${day} de desembre (falten ${n} dies)`);
+      toast(n <= 1 ? '🔒 Aquesta finestra s\'obra demà' : `🔒 Sé que estas impacient, però s\'obra el ${day} de desembre (falten ${n} dies)`);
       return;
     }
     busy = true;
@@ -829,7 +829,7 @@
     $('#cardBody').innerHTML = data.html && data.html.trim()
       ? data.html
       : '<p class="empty"><span>🎁</span>Aquí hi haurà una sorpresa ben aviat…</p>';
-    ['initQuiz', 'initBola', 'initRasca', 'initMuneco', 'initGaleta'].forEach(f => window[f] && window[f]($('#cardBody')));
+    ['initQuiz', 'initBola', 'initRasca', 'initMuneco', 'initGaleta', 'initPersonatge'].forEach(f => window[f] && window[f]($('#cardBody')));
   }
 
   /* =========================================================

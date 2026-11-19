@@ -7,8 +7,8 @@
 */
 (function () {
   const TEXTOS = {
-    intro:    "Toca la galeta per trencar-la 🥠",
-    final:    "El teu 2027 🥠",
+    intro:    "Toca la galeta per trencar-la",
+    final:    "El teu 2027",
     numeros:  "Números de la sort",
     una_altra: "Trencar una altra galeta",
     aria:     "Galeta de la sort. Toca per trencar-la"
