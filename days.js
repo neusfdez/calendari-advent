@@ -13,7 +13,7 @@
 */
 window.DAYS = [
   /*  1 */ { titulo: "", html: "" },
-  /*  2 */ { titulo: "Rasca y gana", html: '<div data-rasca></div>' },
+  /*  2 */ { titulo: "Rasca i guanya", html: '<div data-rasca></div>' },
   /*  3 */ { titulo: "Repte del dia", html: "Escriu tres coses de les que estiguis orgullos/a d'aquest any" },
   /*  4 */ { titulo: "El gatet et desitja un bon dia", html: '<img src="contingut/gat.jpg" alt="Foto">' },
   /*  5 */ { titulo: "", html: "" },
@@ -31,8 +31,8 @@ window.DAYS = [
   /* 17 */ { titulo: "", html: "" },
   /* 18 */ { titulo: "", html: "" },
   /* 19 */ { titulo: "Repte del dia", html: "Escriu tres objectius pel 2027" },
-  /* 20 */ { titulo: "Bola de cristal", html: '<div data-bola></div>' },
-  /* 21 */ { titulo: "4 days for Christmaasss", html: '<img src="contingut/foto-tres.jpg" alt="Foto">' },
+  /* 20 */ { titulo: "Bola de vidre", html: '<div data-bola></div>' },
+  /* 21 */ { titulo: "4 dies per Nadal", html: '<img src="contingut/foto-tres.jpg" alt="Foto">' },
   /* 22 */ { titulo: "", html: "" },
   /* 23 */ { titulo: "", html: "" },
   /* 24 */ { titulo: "", html: "" },

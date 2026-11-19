@@ -9,11 +9,11 @@
 */
 (function () {
   const PREGUNTAS = [
-    { img: "quiz/klaus.jpg", correcta: "Klaus",         falsas: ["Elf", "Pesadilla antes de Navidad", "Arthur Christmas"] },
-    { img: "quiz/grinch.jpg", correcta: "El Grinch",            falsas: ["Solo en casa", "Los Gremlins", "Elf"] },
-    { img: "quiz/cambio-princesa.jpg", correcta: "Cambio de princesa", falsas: ["Love Actually", "Calendario de Navidad", "El diario de Noel"] },
-    { img: "quiz/love-actually.jpg", correcta: "Love Actually",        falsas: ["Herencia Navideña", "El caballero de la Navidad", "The Holiday"] },
-    { img: "quiz/last-christmas.jpg", correcta: "Last Christmas",        falsas: ["Let it snow", "Meet me next Christmas", "Navidad inesperada"] },
+    { img: "quiz/klaus.jpg", correcta: "Klaus",         falsas: ["Elf", "Malson abans de Nadal", "Arthur Christmas"] },
+    { img: "quiz/grinch.jpg", correcta: "El Grinch",            falsas: ["Sol a casa", "Els Gremlins", "Elf"] },
+    { img: "quiz/cambio-princesa.jpg", correcta: "Intercanvi de princesa", falsas: ["Love Actually", "Calendari de Nadal", "El diari de Noel"] },
+    { img: "quiz/love-actually.jpg", correcta: "Love Actually",        falsas: ["L'herència de Nadal", "El cavaller de Nadal", "The Holiday"] },
+    { img: "quiz/last-christmas.jpg", correcta: "Last Christmas",        falsas: ["Let it snow", "Meet me next Christmas", "Nadal inesperat"] },
     { img: "quiz/the-holiday.jpg", correcta: "The Holiday",   falsas: ["Last Christmas", "Love Actually", "El diario de Bridget Jones"] }
   ];
 
@@ -86,12 +86,12 @@
       host.innerHTML = '';
       const p = PREGUNTAS[i];
       const wrap = h('div', 'qz');
-      wrap.appendChild(h('p', 'qz-prog', `Peli ${i + 1} de ${total}`));
+      wrap.appendChild(h('p', 'qz-prog', `Pel·lícula ${i + 1} de ${total}`));
 
       const fig = h('div', 'qz-frame');
       const img = new Image();
-      img.alt = 'Fotograma de una película navideña';
-      img.onerror = () => { fig.innerHTML = ''; fig.appendChild(h('div', 'qz-missing', `Falta la imagen ${p.img}`)); };
+      img.alt = 'Fotograma d\'una pel·lícula nadalenca';
+      img.onerror = () => { fig.innerHTML = ''; fig.appendChild(h('div', 'qz-missing', `Falta la imatge ${p.img}`)); };
       img.src = p.img;
       fig.appendChild(img);
       wrap.appendChild(fig);

@@ -538,7 +538,7 @@
   /* ---------- una ventana / puerta ---------- */
   function drawWindow(layer, o, day, idx, deco) {
     seed(300 + idx * 17);
-    const g = el('g', deco ? null : { class: 'opening', 'data-day': day, tabindex: 0, role: 'button', 'aria-label': `Día ${day}` }, layer);
+    const g = el('g', deco ? null : { class: 'opening', 'data-day': day, tabindex: 0, role: 'button', 'aria-label': `Dia ${day}` }, layer);
     let frame, glass, cx, cy, bw, bh, sillY = null, badgeY, badgeR, curved = false;
 
     if (o.type === 'rect') {
@@ -729,21 +729,21 @@
       g.classList.toggle('locked', !unlocked);
       g.classList.toggle('open', set.has(d) && unlocked);
       g.classList.toggle('today', unlocked && !testMode && d === today);
-      g.setAttribute('aria-label', `Día ${d}` + (unlocked ? (set.has(d) ? ', abierta' : '') : ', bloqueada'));
+      g.setAttribute('aria-label', `Dia ${d}` + (unlocked ? (set.has(d) ? ', oberta' : '') : ', bloquejada'));
     }
     const btn = $('#testBtn');
     if (btn) {
-      btn.textContent = `🧪 Modo prueba: ${testMode ? 'ON' : 'OFF'}`;
+      btn.textContent = `🧪 Mode prova: ${testMode ? 'ON' : 'OFF'}`;
       btn.setAttribute('aria-pressed', String(testMode));
     }
     const sub = $('#subtitle');
     const now = new Date(), start = unlockDate(1);
-    if (testMode) sub.textContent = 'Modo prueba: puedes abrir todas las ventanas';
+    if (testMode) sub.textContent = 'Mode prova: pots obrir totes les finestres';
     else if (now < start) {
       const n = daysUntil(start);
-      sub.textContent = n <= 1 ? '¡Mañana se abre la primera ventana!' : `Faltan ${n} días para la primera ventana`;
-    } else if (today >= 1 && today <= 24) sub.textContent = `Hoy se abre la ventana ${today} ✨`;
-    else sub.textContent = '¡Bon Nadal! 🎄';
+      sub.textContent = n <= 1 ? 'Demà s\'obre la primera finestra!' : `Falten ${n} dies per a la primera finestra`;
+    } else if (today >= 1 && today <= 24) sub.textContent = `Avui s'obre la finestra ${today} ✨`;
+    else sub.textContent = 'Bon Nadal! 🎄';
   }
 
   let toastTimer;
@@ -768,7 +768,7 @@
       g.classList.remove('shake'); void g.getBBox(); g.classList.add('shake');
       setTimeout(() => g.classList.remove('shake'), 520);
       const n = daysUntil(unlockDate(day));
-      toast(n <= 1 ? '🔒 Aquesta finestra s\'obra demà' : `🔒 Sé que estas impacient però s\'obra el ${day} de desembre (falten ${n} dies)`);
+      toast(n <= 1 ? '🔒 Aquesta finestra s\'obra demà' : `🔒 Sé que tens impaciència, però s\'obra el ${day} de desembre (falten ${n} dies)`);
       return;
     }
     busy = true;
@@ -828,7 +828,7 @@
     title.hidden = !data.titulo;
     $('#cardBody').innerHTML = data.html && data.html.trim()
       ? data.html
-      : '<p class="empty"><span>🎁</span>Aquí habrá una sorpresa muy pronto…</p>';
+      : '<p class="empty"><span>🎁</span>Aquí hi haurà una sorpresa ben aviat…</p>';
     if (window.initQuiz) window.initQuiz($('#cardBody'));
     if (window.initBola) window.initBola($('#cardBody'));
     if (window.initRasca) window.initRasca($('#cardBody'));
@@ -1032,7 +1032,7 @@
       document.body.classList.add('noanim');
       refresh();
       requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.remove('noanim')));
-      toast(testMode ? '🔓 Modo prueba activado: abre la ventana que quieras' : '🔒 Modo prueba desactivado');
+      toast(testMode ? '🔓 Mode prova activat: obre la finestra que vulguis' : '🔒 Mode prova desactivat');
     });
   }
 

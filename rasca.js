@@ -60,14 +60,14 @@
   function start(host) {
     host.innerHTML = '';
     const wrap = h('div', 'rs');
-    const hint = h('p', 'rs-hint', 'Rasca con el dedo 👆');
+    const hint = h('p', 'rs-hint', 'Rasca amb el dit 👆');
     const box = h('div', 'rs-box');
 
     /* premio (debajo) */
     const prize = h('div', 'rs-prize');
     const pic = h('div', 'rs-pic');
     const img = new Image();
-    img.alt = 'Un bombón';
+    img.alt = 'Un bombó';
     img.onerror = () => { pic.innerHTML = ''; pic.appendChild(h('span', 'rs-emoji', '🍫')); };
     img.src = FOTO;
     pic.appendChild(img);
@@ -77,7 +77,7 @@
     const cv = h('canvas', 'rs-cv');
     box.append(prize, cv);
 
-    const skip = h('button', 'rs-skip', 'Descubrir sin rascar');
+    const skip = h('button', 'rs-skip', 'Descobrir sense rascar');
     skip.type = 'button';
     wrap.append(hint, box, skip);
     host.appendChild(wrap);

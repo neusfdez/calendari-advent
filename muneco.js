@@ -11,7 +11,7 @@
   - Accesorios: lista CATS más abajo (y su dibujo en HATS, GAFAS, NARIZ, CUELLO, CUERPO, MANO)
 */
 (function () {
-  const FOTO = "contingut/xina.jpg";
+  const FOTO = "contingut/xina.jpeg";
   const POSICION = "derecha";
 
   const TEXTOS = {
@@ -20,7 +20,7 @@
     reiniciar: "Tornar a començar",
     otro:      "Vestir un altre ninot de neu",
     calor1:    "Uf, quina calor! 🥵",
-    calor2:    "Ay, ay, ay… s'esta derretint 💧",
+    calor2:    "Ai, ai, ai… s'està fonent 💧",
     fin:       "Bye 💦"
   };
 
@@ -29,39 +29,39 @@
 
   /* ================= ACCESORIOS DISPONIBLES ================= */
   const CATS = [
-    { id: "sombrero", ico: "🎩", nom: "Sombrero", ops: [
-      { k: "santa",    ico: "🎅", nom: "Papá Noel" },
+    { id: "sombrero", ico: "🎩", nom: "Barret", ops: [
+      { k: "santa",    ico: "🎅", nom: "Pare Noel" },
       { k: "copa",     ico: "🎩", nom: "De copa" },
-      { k: "lana",     ico: "🧶", nom: "De lana" },
-      { k: "cuernos",  ico: "🦌", nom: "Cuernos" },
+      { k: "lana",     ico: "🧶", nom: "De llana" },
+      { k: "cuernos",  ico: "🦌", nom: "Banyes" },
       { k: "corona",   ico: "👑", nom: "Corona" },
-      { k: "orejeras", ico: "🎧", nom: "Orejeras" }
+      { k: "orejeras", ico: "🎧", nom: "Tapadores d'orelles" }
     ]},
-    { id: "gafas", ico: "🕶️", nom: "Gafas", ops: [
+    { id: "gafas", ico: "🕶️", nom: "Ulleres", ops: [
       { k: "sol",       ico: "🕶️", nom: "De sol" },
-      { k: "redondas",  ico: "👓", nom: "Redondas" },
-      { k: "estrella",  ico: "⭐", nom: "Estrellas" }
+      { k: "redondas",  ico: "👓", nom: "Rodones" },
+      { k: "estrella",  ico: "⭐", nom: "Estrelles" }
     ]},
-    { id: "nariz", ico: "🥕", nom: "Nariz", ops: [
-      { k: "zanahoria", ico: "🥕", nom: "Zanahoria" },
-      { k: "reno",      ico: "🔴", nom: "De reno" }
+    { id: "nariz", ico: "🥕", nom: "Nas", ops: [
+      { k: "zanahoria", ico: "🥕", nom: "Pastanaga" },
+      { k: "reno",      ico: "🔴", nom: "De ren" }
     ]},
-    { id: "cuello", ico: "🧣", nom: "Cuello", ops: [
-      { k: "roja",     ico: "🧣", nom: "Bufanda roja" },
-      { k: "rayas",    ico: "🍬", nom: "Bufanda rayas" },
-      { k: "verde",    ico: "🟢", nom: "Bufanda verde" },
-      { k: "pajarita", ico: "🎀", nom: "Pajarita" }
+    { id: "cuello", ico: "🧣", nom: "Coll", ops: [
+      { k: "roja",     ico: "🧣", nom: "Bufanda vermella" },
+      { k: "rayas",    ico: "🍬", nom: "Bufanda de ratlles" },
+      { k: "verde",    ico: "🟢", nom: "Bufanda verda" },
+      { k: "pajarita", ico: "🎀", nom: "Corbatí" }
     ]},
-    { id: "cuerpo", ico: "🔘", nom: "Cuerpo", ops: [
-      { k: "botones", ico: "⚫", nom: "Botones" },
-      { k: "colores", ico: "🔵", nom: "De colores" },
-      { k: "luces",   ico: "💡", nom: "Luces" }
+    { id: "cuerpo", ico: "🔘", nom: "Cos", ops: [
+      { k: "botones", ico: "⚫", nom: "Botons" },
+      { k: "colores", ico: "🔵", nom: "De colors" },
+      { k: "luces",   ico: "💡", nom: "Llums" }
     ]},
-    { id: "mano", ico: "🍭", nom: "Mano", ops: [
-      { k: "baston",  ico: "🍭", nom: "Bastón" },
-      { k: "regalo",  ico: "🎁", nom: "Regalo" },
-      { k: "taza",    ico: "☕", nom: "Chocolate" },
-      { k: "abanico", ico: "🌬️", nom: "Abanico" }
+    { id: "mano", ico: "🍭", nom: "Mà", ops: [
+      { k: "baston",  ico: "🍭", nom: "Bastó" },
+      { k: "regalo",  ico: "🎁", nom: "Regal" },
+      { k: "taza",    ico: "☕", nom: "Xocolata" },
+      { k: "abanico", ico: "🌬️", nom: "Ventall" }
     ]}
   ];
 
@@ -154,7 +154,7 @@
     const puddle = melt
       ? `<ellipse class="puddle" cx="100" cy="241" rx="60" ry="9" fill="#bfe0f5" fill-opacity=".9" stroke="#e8f5ff" stroke-width="1.5"/>`
       : "";
-    return `<svg class="mn-svg${melt ? " mn-melting" : ""}" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Muñeco de nieve">
+    return `<svg class="mn-svg${melt ? " mn-melting" : ""}" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ninot de neu">
       <defs>
         <radialGradient id="mn-b" cx="35%" cy="30%" r="80%">
           <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#e6eff8"/><stop offset="1" stop-color="#c3d5e8"/>
@@ -336,7 +336,7 @@
 
       chips.innerHTML = '';
       const c = CATS[tab];
-      [{ k: null, ico: '🚫', nom: 'Ninguno' }].concat(c.ops).forEach(o => {
+      [{ k: null, ico: '🚫', nom: 'Cap' }].concat(c.ops).forEach(o => {
         const b = h('button', 'mn-chip' + ((sel[c.id] || null) === o.k ? ' on' : ''), `${o.ico} ${o.nom}`);
         b.type = 'button';
         b.onclick = () => { sel[c.id] = o.k; pintar(true); };
@@ -363,7 +363,7 @@
 
     const img = new Image();
     img.className = 'mn-photo';
-    img.alt = 'Nuestra foto';
+    img.alt = 'La nostra foto';
     img.onerror = () => {
       img.remove();
       box.classList.add('nofoto');
