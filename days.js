@@ -13,7 +13,7 @@
 */
 window.DAYS = [
   /*  1 */ { titulo: "", html: "" },
-  /*  2 */ { titulo: "", html: "" },
+  /*  2 */ { titulo: "Rasca y gana", html: '<div data-rasca></div>' },
   /*  3 */ { titulo: "Repte del dia", html: "Escriu tres coses de les que estiguis orgullos/a d'aquest any" },
   /*  4 */ { titulo: "El gatet et desitja un bon dia", html: '<img src="contingut/gat.jpg" alt="Foto">' },
   /*  5 */ { titulo: "", html: "" },
