@@ -51,56 +51,47 @@
     "El 2027 et deixarà bons records i ganes de repetir."
   ];
 
-  /* ---------- dibuix de la galeta (SVG) ---------- */
+  /* ---------- la galeta: l’emoji, en dues còpies tallades per la meitat ---------- */
   const COOKIE = `
-  <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <linearGradient id="gl-g" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0" stop-color="#f6cf7d"/><stop offset="1" stop-color="#d9953a"/>
-      </linearGradient>
-    </defs>
-    <ellipse cx="100" cy="130" rx="62" ry="8" fill="rgba(0,0,0,.18)"/>
-    <g class="gl-all">
-      <path d="M100 38 C90 62 90 90 100 106 C110 90 110 62 100 38 Z" fill="#8f5518"/>
-      <g class="gl-l">
-        <path d="M100 38 C70 20 26 34 22 74 C19 104 52 124 100 106 C92 90 92 62 100 38 Z" fill="url(#gl-g)" stroke="#b86f22" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M44 64 C52 48 70 42 84 46" stroke="#fff" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M30 82 C46 98 70 102 90 96" stroke="#b86f22" stroke-opacity=".5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      </g>
-      <g class="gl-r">
-        <path d="M100 38 C130 20 174 34 178 74 C181 104 148 124 100 106 C108 90 108 62 100 38 Z" fill="url(#gl-g)" stroke="#b86f22" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M156 64 C148 48 130 42 116 46" stroke="#fff" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M170 82 C154 98 130 102 110 96" stroke="#b86f22" stroke-opacity=".5" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      </g>
-      <g fill="#e5a949">
-        <circle class="gl-crumb" cx="100" cy="86" r="2.6" style="--dx:-46px;--dy:-34px"/>
-        <circle class="gl-crumb" cx="100" cy="86" r="2" style="--dx:-24px;--dy:-48px"/>
-        <circle class="gl-crumb" cx="100" cy="86" r="2.4" style="--dx:30px;--dy:-44px"/>
-        <circle class="gl-crumb" cx="100" cy="86" r="2.8" style="--dx:50px;--dy:-26px"/>
-        <circle class="gl-crumb" cx="100" cy="86" r="1.8" style="--dx:-56px;--dy:6px"/>
-        <circle class="gl-crumb" cx="100" cy="86" r="2.2" style="--dx:58px;--dy:10px"/>
-      </g>
-    </g>
-  </svg>`;
+    <span class="gl-emo" aria-hidden="true">
+      <span class="gl-h l">🥠</span><span class="gl-h r">🥠</span>
+      <i class="gl-crumb" style="--dx:-46px;--dy:-34px"></i>
+      <i class="gl-crumb" style="--dx:-24px;--dy:-48px"></i>
+      <i class="gl-crumb" style="--dx:30px;--dy:-44px"></i>
+      <i class="gl-crumb" style="--dx:50px;--dy:-26px"></i>
+      <i class="gl-crumb" style="--dx:-56px;--dy:6px"></i>
+      <i class="gl-crumb" style="--dx:58px;--dy:10px"></i>
+    </span>
+    <span class="gl-shadow"></span>`;
 
   const css = `
   .gl { text-align: center; }
   .gl-hint { margin: 0 0 4px; font-weight: 700; color: #7a5848; }
   .gl-cookie {
     display: block; margin: 0 auto; padding: 0; border: 0; background: none;
-    width: min(100%, 250px); cursor: pointer;
+    font-size: clamp(5.5rem, 28vw, 7.5rem); line-height: 1; cursor: pointer;
   }
   .gl-cookie:disabled { cursor: default; }
-  .gl-cookie svg { display: block; width: 100%; height: auto; overflow: visible; }
-  .gl-all { transform-box: fill-box; transform-origin: 50% 100%; }
-  .gl-cookie:not(.broken) .gl-all { animation: glFloat 2.8s ease-in-out infinite; }
-  .gl-cookie.shake .gl-all { animation: glShake .45s ease-in-out; }
-  .gl-l, .gl-r { transition: transform .6s cubic-bezier(.3, 1.4, .5, 1); }
-  .gl-l { transform-origin: 100px 106px; }
-  .gl-r { transform-origin: 100px 106px; }
-  .gl-cookie.broken .gl-l { transform: translate(-30px, 12px) rotate(-26deg); }
-  .gl-cookie.broken .gl-r { transform: translate(30px, 12px) rotate(26deg); }
-  .gl-crumb { opacity: 0; }
+  .gl-emo {
+    position: relative; display: inline-grid; transform-origin: 50% 100%;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  }
+  .gl-h {
+    grid-area: 1 / 1; display: block; transform-origin: 50% 85%;
+    transition: transform .6s cubic-bezier(.3, 1.4, .5, 1);
+  }
+  /* tall en zig-zag pel mig: les dues meitats encaixen exactament */
+  .gl-h.l { clip-path: polygon(-10% -10%, 50.6% -10%, 46.6% 20%, 54.6% 35%, 47.6% 52%, 54.6% 68%, 48.6% 85%, 50.6% 110%, -10% 110%); }
+  .gl-h.r { clip-path: polygon(50% -10%, 110% -10%, 110% 110%, 50% 110%, 48% 85%, 54% 68%, 47% 52%, 54% 35%, 46% 20%); }
+  .gl-shadow { display: block; width: .9em; height: .07em; margin: .03em auto 0; border-radius: 50%; background: rgba(0, 0, 0, .18); filter: blur(2px); }
+  .gl-cookie:not(.broken) .gl-emo { animation: glFloat 2.8s ease-in-out infinite; }
+  .gl-cookie.shake .gl-emo { animation: glShake .45s ease-in-out; }
+  .gl-cookie.broken .gl-h.l { transform: translate(-.32em, .1em) rotate(-24deg); }
+  .gl-cookie.broken .gl-h.r { transform: translate(.32em, .1em) rotate(24deg); }
+  .gl-crumb {
+    position: absolute; left: 50%; top: 55%; width: 6px; height: 6px;
+    border-radius: 50%; background: #d9953a; opacity: 0;
+  }
   .gl-cookie.broken .gl-crumb { animation: glCrumb .9s ease-out both; }
   .gl-paper {
     margin: 4px auto 0; padding: 14px 16px 12px; max-width: 290px;
@@ -132,8 +123,8 @@
     100% { opacity: 1; transform: none; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .gl-cookie .gl-all, .gl-paper, .gl-crumb { animation: none !important; }
-    .gl-l, .gl-r { transition-duration: .01s; }
+    .gl-cookie .gl-emo, .gl-paper, .gl-crumb { animation: none !important; }
+    .gl-h { transition-duration: .01s; }
     .gl-cookie.broken .gl-crumb { opacity: 0; }
   }
   `;
