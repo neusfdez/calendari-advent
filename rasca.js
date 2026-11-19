@@ -4,7 +4,7 @@
   Para cambiar el mensaje o la foto, edita solo las dos líneas de abajo.
 */
 (function () {
-  const MENSAJE = "La Neus us porta xocolatitos";
+  const MENSAJE = "Un bombón para otro bombón (us porto xocolatitos)";
   const FOTO = "contingut/bombon.jpg";   // sube tu foto a la carpeta rasca/ del repositorio
   const UMBRAL = 0.5;                // al rascar esta fracción se destapa todo
 
@@ -146,7 +146,6 @@
       done = true;
       cv.classList.add('gone');
       box.classList.add('won');
-      hint.textContent = '¡Sorpresa! 🍫';
       skip.hidden = true;
     }
 

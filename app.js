@@ -832,6 +832,7 @@
     if (window.initQuiz) window.initQuiz($('#cardBody'));
     if (window.initBola) window.initBola($('#cardBody'));
     if (window.initRasca) window.initRasca($('#cardBody'));
+    if (window.initMuneco) window.initMuneco($('#cardBody'));
   }
 
   /* =========================================================
