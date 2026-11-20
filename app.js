@@ -829,7 +829,7 @@
     $('#cardBody').innerHTML = data.html && data.html.trim()
       ? data.html
       : '<p class="empty"><span>🎁</span>Aquí hi haurà una sorpresa ben aviat…</p>';
-    ['initQuiz', 'initBola', 'initRasca', 'initMuneco', 'initGaleta', 'initPersonatge'].forEach(f => window[f] && window[f]($('#cardBody')));
+    ['initQuiz', 'initBola', 'initRasca', 'initMuneco', 'initGaleta', 'initPersonatge', 'initSobre'].forEach(f => window[f] && window[f]($('#cardBody')));
   }
 
   /* =========================================================
