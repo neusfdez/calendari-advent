@@ -1,12 +1,31 @@
 /*
-  RASCA Y GANA
-  ------------
-  Para cambiar el mensaje o la foto, edita solo las dos líneas de abajo.
+  RASCA I GUANYA
+  --------------
+  Es pot reutilitzar en tants dies com vulguis, cadascun amb la seva foto i el seu missatge,
+  posant-ho al div de days.js:
+
+    html: "<div data-rasca data-img='contingut/foto.jpg' data-msg='El teu missatge' data-alt='Descripció'></div>"
+
+  - data-img:   ruta de la foto
+  - data-msg:   missatge que apareix en rascar (evita l’apòstrof recte ' ; fes servir ’)
+  - data-alt:   descripció de la foto (opcional)
+  - data-emoji: emoji que es veu si falta la foto (opcional)
+
+  Si no hi poses res, es fan servir els valors per defecte de MENSAJE i FOTO.
 */
 (function () {
-  const MENSAJE = "Un bombó per a un altre bombó (us porto xocolatess)";
-  const FOTO = "contingut/bombon.jpg";   // sube tu foto a la carpeta rasca/ del repositorio
-  const UMBRAL = 0.5;                // al rascar esta fracción se destapa todo
+  const MENSAJE = "La Neus us porta xocolatitos";   // missatge per defecte
+  const FOTO = "rasca/bombon.jpg";                  // foto per defecte
+  const EMOJI_FALTA = "🎁";                         // emoji si falta la foto
+  const UMBRAL = 0.5;                               // en rascar aquesta fracció es destapa tot
+
+  const TEXTOS = {
+    pista:    "Rasca amb el dit 👆",
+    capa:     "✨ Rasca aquí ✨",
+    saltar:   "Descobrir sense rascar",
+    sorpresa: "Sorpresa! 🎉",
+    alt:      "Sorpresa"
+  };
 
   const css = `
   .rs { text-align: center; }
@@ -60,24 +79,28 @@
   function start(host) {
     host.innerHTML = '';
     const wrap = h('div', 'rs');
-    const hint = h('p', 'rs-hint', 'Rasca amb el dit 👆');
+    const MSG = host.getAttribute('data-msg') || MENSAJE;
+    const IMG = host.getAttribute('data-img') || FOTO;
+    const ALT = host.getAttribute('data-alt') || TEXTOS.alt;
+    const EMO = host.getAttribute('data-emoji') || EMOJI_FALTA;
+    const hint = h('p', 'rs-hint', TEXTOS.pista);
     const box = h('div', 'rs-box');
 
     /* premio (debajo) */
     const prize = h('div', 'rs-prize');
     const pic = h('div', 'rs-pic');
     const img = new Image();
-    img.alt = 'Un bombó';
-    img.onerror = () => { pic.innerHTML = ''; pic.appendChild(h('span', 'rs-emoji', '🍫')); };
-    img.src = FOTO;
+    img.alt = ALT;
+    img.onerror = () => { pic.innerHTML = ''; pic.appendChild(h('span', 'rs-emoji', EMO)); };
+    img.src = IMG;
     pic.appendChild(img);
-    prize.append(pic, h('p', 'rs-msg', MENSAJE));
+    prize.append(pic, h('p', 'rs-msg', MSG));
 
     /* capa plateada (encima) */
     const cv = h('canvas', 'rs-cv');
     box.append(prize, cv);
 
-    const skip = h('button', 'rs-skip', 'Descobrir sense rascar');
+    const skip = h('button', 'rs-skip', TEXTOS.saltar);
     skip.type = 'button';
     wrap.append(hint, box, skip);
     host.appendChild(wrap);
@@ -102,7 +125,7 @@
       ctx.font = '700 22px Quicksand, "Segoe UI", sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText('✨ Rasca aquí ✨', W / 2, H / 2);
+      ctx.fillText(TEXTOS.capa, W / 2, H / 2);
     }
 
     function preparar() {
@@ -146,6 +169,7 @@
       done = true;
       cv.classList.add('gone');
       box.classList.add('won');
+      hint.textContent = TEXTOS.sorpresa;
       skip.hidden = true;
     }
 

@@ -42,7 +42,7 @@
     { q: "Al dinar de Nadal, tu ets…", op: [
       { t: "Qui s’ha passat tres dies cuinant",                         p: { noel: 2, follet: 1 } },
       { t: "Qui fa bromes i anima tota la taula",                       p: { follet: 2, rudolf: 1 } },
-      { t: "Qui ho observa tot i deixa anar algun comentari mordaç",    p: { grinch: 2 } },
+      { t: "Qui ho observa tot i deixa anar algun comentari sarcàstic",    p: { grinch: 2 } },
       { t: "Qui vigila que tothom estigui còmode i tingui de tot",      p: { ninot: 2, tio: 1 } }
     ]},
     { q: "Com emboliques els regals?", op: [
