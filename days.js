@@ -12,7 +12,7 @@
   Si un día se queda vacío, se muestra un mensaje de "pronto habrá una sorpresa".
 */
 window.DAYS = [
-  /*  1 */ { titulo: "", html: "" }, // intro
+  /* 1 */ { titulo: "It's tiimeeee", html: "<iframe src='https://www.youtube.com/embed/2qIZ1A3P8po' style='width:100%;aspect-ratio:16/9;border:0' allow='encrypted-media; picture-in-picture; fullscreen' allowfullscreen loading='lazy'></iframe>" },
   /*  2 */ { titulo: "Rasca i guanya", html: '<div data-rasca></div>' },
   /*  3 */ { titulo: "Repte del dia", html: "Escriu tres coses de les que estiguis orgullos/a d'aquest any" },
   /*  4 */ { titulo: "El gatet et desitja un bon dia", html: '<img src="contingut/gat.jpg" alt="Foto">' },
@@ -26,14 +26,14 @@ window.DAYS = [
   /* 12 */ { titulo: "Endevina la peli", html: '<div data-quiz></div>' },
   /* 13 */ { titulo: "Pure cinema", html: '<video src="video/samurai.mp4" controls playsinline preload="metadata" style="max-height:44svh"></video>' },
   /* 14 */ { titulo: "Rasca i guanya", html: "<div data-rasca data-img='contingut/xuxes.jpg' data-msg='Xuxes per alegrar el dia' data-alt='Xuxes'></div>" },
-  /* 15 */ { titulo: "", html: "" }, // adivinalla
+  /* 15 */ { titulo: "No perdem mai la tradició dels pokes please", html: "<img src='contingut/poke.jpeg' alt='poke'>" },
   /* 16 */ { titulo: "Quin personatge de Nadal ets?", html: '<div data-personatge></div>' },
   /* 17 */ { titulo: "Una carta per a tu", html: "<div data-sobre data-img='contingut/shanghai.jpeg' data-alt='Xina'></div>" },
   /* 18 */ { titulo: "Fun fact", html: "A República Txeca per Nadal és tradició llençar una sabata per sobre de l'hombro. Si la punta de la sabata senyala a la porta, suposadament et cases l'any vinent. (in case u wanna try)" },
   /* 19 */ { titulo: "Repte del dia", html: "Escriu tres objectius pel 2027" },
-  /* 20 */ { titulo: "Bola de vidre", html: '<div data-bola></div>' },
+  /* 20 */ { titulo: "Matí navideño", html: 'Quedem a les 10h, estigueu preparats!' }, // xurros
   /* 21 */ { titulo: "4 dies per Nadal", html: '<img src="contingut/foto-tres.jpeg" alt="Foto">' },
-  /* 22 */ { titulo: "", html: "" }, // xurros
-  /* 23 */ { titulo: "", html: "" }, // envia una foto pel grup
-  /* 24 */ { titulo: "", html: "" }, // regalet
+  /* 22 */ { titulo: "Bola de vidre", html: '<div data-bola></div>' },
+  /* 23 */ { titulo: "Repte del dia", html: "<p>Avui toca fer <b>3 fotos</b> i enviar-les al grup abans de mitjanit:</p><ol style='text-align:left'><li>El teu esmorzar</li><li>Una decoració de Nadal que et vegis pel carrer ⭐</li><li>L'arbre de Nadal de casa teva 🎄</li></ol>" },
+  /* 24 */ { titulo: "Bon Nadal", html: "" }, // regalet + text
 ];

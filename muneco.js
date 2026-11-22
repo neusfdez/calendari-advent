@@ -20,7 +20,7 @@
     reiniciar: "Tornar a començar",
     otro:      "Vestir un altre ninot de neu",
     calor1:    "Uf, quina calor! 🥵",
-    calor2:    "Ai, ai, ai… s'està fonent 💧",
+    calor2:    "Aiai… s'està desfent 💧",
     fin:       "Bye 💦"
   };
 
