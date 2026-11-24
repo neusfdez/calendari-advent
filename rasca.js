@@ -15,9 +15,10 @@
 */
 (function () {
   const MENSAJE = "La Neus us porta xocolatitos";   // missatge per defecte
-  const FOTO = "rasca/bombon.jpg";                  // foto per defecte
+  const FOTO = "contingut/bombon.jpg";                  // foto per defecte
   const EMOJI_FALTA = "🎁";                         // emoji si falta la foto
   const UMBRAL = 0.5;                               // en rascar aquesta fracció es destapa tot
+  const BOTO_SALTAR = false;                        // true = mostra "Descobrir sense rascar"
 
   const TEXTOS = {
     pista:    "Rasca amb el dit 👆",
@@ -100,9 +101,13 @@
     const cv = h('canvas', 'rs-cv');
     box.append(prize, cv);
 
-    const skip = h('button', 'rs-skip', TEXTOS.saltar);
-    skip.type = 'button';
-    wrap.append(hint, box, skip);
+    wrap.append(hint, box);
+    let skip = null;
+    if (BOTO_SALTAR) {
+      skip = h('button', 'rs-skip', TEXTOS.saltar);
+      skip.type = 'button';
+      wrap.appendChild(skip);
+    }
     host.appendChild(wrap);
 
     let ctx, W, H, done = false, drawing = false, last = null, lastCheck = 0;
@@ -170,7 +175,7 @@
       cv.classList.add('gone');
       box.classList.add('won');
       hint.textContent = TEXTOS.sorpresa;
-      skip.hidden = true;
+      if (skip) skip.hidden = true;
     }
 
     cv.addEventListener('pointerdown', (e) => {
@@ -191,7 +196,7 @@
     const soltar = () => { if (!drawing) return; drawing = false; revisar(); };
     cv.addEventListener('pointerup', soltar);
     cv.addEventListener('pointercancel', soltar);
-    skip.addEventListener('click', descubrir);
+    if (skip) skip.addEventListener('click', descubrir);
 
     preparar();
   }

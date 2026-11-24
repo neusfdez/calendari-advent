@@ -11,7 +11,7 @@
   const PREGUNTAS = [
     { img: "quiz/klaus.jpg", correcta: "Klaus",         falsas: ["Elf", "Pesadilla antes de Navidad", "Arthur Christmas"] },
     { img: "quiz/grinch.jpg", correcta: "El Grinch",            falsas: ["Solo en casa", "Els Gremlins", "Elf"] },
-    { img: "quiz/cambio-princesa.jpg", correcta: "Intercanvi de princesa", falsas: ["Love Actually", "Calendario de Navidad", "El diario de Noel"] },
+    { img: "quiz/cambio-princesa.jpg", correcta: "Cambio de princesa", falsas: ["Love Actually", "Calendario de Navidad", "El diario de Noel"] },
     { img: "quiz/love-actually.jpg", correcta: "Love Actually",        falsas: ["Herencia Navideña", "El caballero de la Navidad", "The Holiday"] },
     { img: "quiz/last-christmas.jpg", correcta: "Last Christmas",        falsas: ["Let it snow", "Meet me next Christmas", "Navidad inesperada"] },
     { img: "quiz/the-holiday.jpg", correcta: "The Holiday",   falsas: ["Last Christmas", "Love Actually", "El diario de Bridget Jones"] }
