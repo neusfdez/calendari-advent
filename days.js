@@ -25,11 +25,11 @@ window.DAYS = [
   /* 11 */ { titulo: "Repte del dia", html: "<p>Posa't mitjons de nadal o amb estampat guai</p><img src='contingut/mitjons.jpg' alt='Mitjons de Nadal'>" },
   /* 12 */ { titulo: "Endevina la peli", html: '<div data-quiz></div>' },
   /* 13 */ { titulo: "Pure cinema", html: '<video src="video/samurai.mp4" controls playsinline preload="metadata" style="max-height:44svh"></video>' },
-  /* 14 */ { titulo: "Rasca i guanya", html: "<div data-rasca data-img='contingut/xuxes.jpg' data-msg='Xuxes per alegrar el dia' data-alt='Xuxes'></div>" },
-  /* 15 */ { titulo: "No perdem mai la tradició dels pokes please", html: "<img src='contingut/poke.jpeg' alt='poke'>" },
+  /* 14 */ { titulo: "No perdem mai la tradició dels pokes please", html: "<img src='contingut/poke.jpeg' alt='poke'>" },
+  /* 15 */ { titulo: "Rasca i guanya", html: "<div data-rasca data-img='contingut/xuxes.jpg' data-msg='Xuxes per alegrar el dia' data-alt='Xuxes'></div>" },
   /* 16 */ { titulo: "Quin personatge de Nadal ets?", html: '<div data-personatge></div>' },
-  /* 17 */ { titulo: "Una carta per a tu", html: "<div data-sobre data-img='contingut/shanghai.jpeg' data-alt='Xina'></div>" },
-  /* 18 */ { titulo: "Fun fact", html: "A República Txeca per Nadal és tradició llençar una sabata per sobre de l'hombro. Si la punta de la sabata senyala a la porta, suposadament et cases l'any vinent. (in case u wanna try)" },
+  /* 17 */ { titulo: "Postal de Nadal", html: "<p>Teniu un repte: fer una postal de nadal amb Strava.</p><p>@mary ho sento però t’hauràs de instalar la app de corredors... 😅</p><p>Per fer-ho sortiu a còrrer / caminar fent una forma d’algo relacionat amb el nadal 🎅⭐🎁</p><p>Us deixo alguns exemples de rutes meves del strava pq us serveixi de inspiració 👇</p><div style='display:flex;gap:8px;align-items:flex-start;margin-top:10px'><img src='contingut/strava1.jpeg' alt='Ruta de Strava 1' style='width:calc(50% - 4px);height:auto'><img src='contingut/strava2.jpg' alt='Ruta de Strava 2' style='width:calc(50% - 4px);height:auto'></div>" },
+  /* 18 */ { titulo: "Una carta per a tu", html: "<div data-sobre data-img='contingut/shanghai.jpeg' data-alt='Xina'></div>" },
   /* 19 */ { titulo: "Repte del dia", html: "Escriu tres objectius pel 2027" },
   /* 20 */ { titulo: "Matí navideño", html: 'Quedem a les 10h, estigueu preparats!' }, // xurros
   /* 21 */ { titulo: "4 dies per Nadal", html: '<img src="contingut/foto-tres.jpeg" alt="Foto">' },
@@ -37,3 +37,4 @@ window.DAYS = [
   /* 23 */ { titulo: "Repte del dia", html: "<p>Avui toca fer <b>3 fotos</b> i enviar-les al grup abans de mitjanit:</p><ol style='text-align:left'><li>El teu esmorzar</li><li>Una decoració de Nadal que vegis pel carrer ⭐</li><li>L'arbre de Nadal de casa teva 🎄</li></ol>" },
   /* 24 */ { titulo: "Bon Nadal 🎄", html: "<p>Tinc una última cosa per vosaltres, per haver arribat al dia 24, quan ens veguem us la dono.</p><p>Ja heu arribat al final del calendari!! Espero que us hagi agradat, l’he fet amb molt amor pq i love u molt. Disfruteu del Nadal amb tanta ilusió com jo.</p>" },
 ];
+
