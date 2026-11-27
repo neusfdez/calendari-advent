@@ -84,7 +84,8 @@ h1 {
 }
 body.zooming header, body.zooming #hint { opacity: 0; }
 
-/* BOTÓN DE PRUEBA (temporal) */
+/*
+ BOTÓN DE PRUEBA (temporal)
 #testBtn {
   pointer-events: auto;
   display: inline-block;
@@ -104,6 +105,7 @@ body.zooming header, body.zooming #hint { opacity: 0; }
   background: #9fe0b5;
   border-color: #9fe0b5;
 }
+*/
 
 #hint {
   position: fixed;

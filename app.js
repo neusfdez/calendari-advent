@@ -22,16 +22,11 @@
   const qs = new URLSearchParams(location.search);
   if (qs.has('reset')) ['-opened', '-opened-test', '-test'].forEach((s) => store.del(KEY + s));
 
-  // Modo prueba: todas las ventanas se pueden abrir. Lo que abras en modo prueba
-  // se guarda aparte, así no afecta a las ventanas "de verdad".
-  let testMode = store.get(KEY + '-test', false);
+  // Modo prueba desactivado.
+  const testMode = false;
   const openedReal = new Set(store.get(KEY + '-opened', []));
-  let openedTest = new Set(store.get(KEY + '-opened-test', []));
-  const openedSet = () => (testMode ? openedTest : openedReal);
-  const saveOpened = () => {
-    if (testMode) store.set(KEY + '-opened-test', [...openedTest]);
-    else store.set(KEY + '-opened', [...openedReal]);
-  };
+  const openedSet = () => openedReal;
+  const saveOpened = () => store.set(KEY + '-opened', [...openedReal]);
 
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const unlockDate = (n) => new Date(CONFIG.year, CONFIG.month, n);
@@ -731,15 +726,9 @@
       g.classList.toggle('today', unlocked && !testMode && d === today);
       g.setAttribute('aria-label', `Dia ${d}` + (unlocked ? (set.has(d) ? ', oberta' : '') : ', bloquejada'));
     }
-    const btn = $('#testBtn');
-    if (btn) {
-      btn.textContent = `🧪 Mode prova: ${testMode ? 'ON' : 'OFF'}`;
-      btn.setAttribute('aria-pressed', String(testMode));
-    }
     const sub = $('#subtitle');
     const now = new Date(), start = unlockDate(1);
-    if (testMode) sub.textContent = 'Mode prova: pots obrir totes les finestres';
-    else if (now < start) {
+    if (now < start) {
       const n = daysUntil(start);
       sub.textContent = n <= 1 ? 'Demà s\'obre la primera finestra!' : `Falten ${n} dies per a la primera finestra`;
     } else if (today >= 1 && today <= 24) sub.textContent = `Avui s'obre la finestra ${today} ✨`;
@@ -1020,17 +1009,6 @@
     });
     addEventListener('resize', checkHint);
 
-    // BOTÓN DE MODO PRUEBA (temporal: borra este bloque y el botón del HTML cuando acabes)
-    const btn = $('#testBtn');
-    if (btn) btn.addEventListener('click', () => {
-      testMode = !testMode;
-      store.set(KEY + '-test', testMode);
-      if (testMode) { openedTest = new Set(); store.del(KEY + '-opened-test'); }
-      document.body.classList.add('noanim');
-      refresh();
-      requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.remove('noanim')));
-      toast(testMode ? '🔓 Mode prova activat: obre la finestra que vulguis' : '🔒 Mode prova desactivat');
-    });
   }
 
   init();
