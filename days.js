@@ -15,7 +15,7 @@ window.DAYS = [
   /* 1 */ { titulo: "It's tiimeeee", html: "<iframe src='https://www.youtube.com/embed/2qIZ1A3P8po' style='width:100%;aspect-ratio:16/9;border:0' allow='encrypted-media; picture-in-picture; fullscreen' allowfullscreen loading='lazy'></iframe>" },
   /*  2 */ { titulo: "Rasca i guanya", html: "<div data-rasca data-img='contingut/bombon.jpg' data-msg='Us porto xocolatitos' data-alt='Un bombó' data-emoji='🍫'></div>" },
   /*  3 */ { titulo: "Repte del dia", html: "Escriu tres coses de les que estiguis orgullos/a d'aquest any" },
-  /*  4 */ { titulo: "El gatet et desitja un bon dia", html: '<img src="contingut/gat.jpg" alt="Foto">' },
+  /*  4 */ { titulo: "El gatet et desitja un bon dia", html: '<p>Ànims que ja és divendres!!</p><img src="contingut/gat.jpg" alt="Foto">' },
   /*  5 */ { titulo: "Bon dia", html: '<p>De quan encara erem universitaris i no teniem responsabilitats d\'adult...</p><img src="contingut/casa-geri.jpeg" alt="Foto">' },
   /*  6 */ { titulo: "Vesteix al ninot de neu", html: '<div data-muneco></div>' },
   /*  7 */ { titulo: "<3", html: "Avui només et vull dir que t'estimo molt ❤️" },
@@ -35,6 +35,6 @@ window.DAYS = [
   /* 21 */ { titulo: "4 dies per Nadal", html: '<img src="contingut/foto-tres.jpeg" alt="Foto">' },
   /* 22 */ { titulo: "Bola de vidre", html: '<div data-bola></div>' },
   /* 23 */ { titulo: "Repte del dia", html: "<p>Avui toca fer <b>3 fotos</b> i enviar-les al grup abans de mitjanit:</p><ol style='text-align:left'><li>El teu esmorzar</li><li>Una decoració de Nadal que vegis pel carrer ⭐</li><li>L'arbre de Nadal de casa teva 🎄</li></ol>" },
-  /* 24 */ { titulo: "Bon Nadal 🎄", html: "<p>Tinc una última cosa per vosaltres, per haver arribat al dia 24, quan ens veguem us la dono.</p><p>Ja heu arribat al final del calendari!! Espero que us hagi agradat, l’he fet amb molt amor pq i love u molt. Disfruteu del Nadal amb tanta ilusió com jo.</p>" },
+  /* 24 */ { titulo: "Bon Nadal 🎄", html: "<p>Tinc una última cosa per vosaltres, per haver arribat al dia 24, quan ens veguem us la dono.</p><p>Ja heu arribat al final del calendari!! Espero que us hagi agradat, l’he fet amb molt amor pq i love u molt. Disfruteu del Nadal amb tanta ilusió com jo.</p> <img src='contingut/nadal.jpg' alt='Nadal'>" },
 ];
 
